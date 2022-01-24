@@ -346,6 +346,10 @@ template {
   height: 54px;
 }
 
+.subitem{
+  padding-right: 31%;
+}
+
 .naslovnaHeader{
   background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)), url("../img/homeCover.jpg");
   background-position: center;
@@ -354,12 +358,20 @@ template {
   height: 600px;
 }
 
+.proizvodiHeader{
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)), url("../img/shopCover.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
 .welcome{
   margin-top: 50px;
   text-align: center;
   height: 200px;
-  background: rgba(196, 196, 196, 0.42);
   font-family: 'Poppins';
+  color: #ffffff;
 }
 
 .gumbKupi {
@@ -461,6 +473,32 @@ p {
   font-size: 125%;
 }
 
+.popisProizvoda{
+  list-style: none;
+  padding-left: 0 ;
+}
+
+.pretrazi{
+  background-color: #AE8960;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ffffff;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #ffffff;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #ffffff;
+}
+
+.popisProizvoda li{
+  font: 25px "Poppins";
+  color: #762A00;
+}
 
 
 @media (min-width: 992px) {
@@ -679,7 +717,7 @@ p {
   text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .menu {
     display: none;
     text-align: center;
