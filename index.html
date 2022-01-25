@@ -16,6 +16,10 @@
         <!-- Naš stil -->
         <link href="css/style.css" rel="stylesheet">
 
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,115 +29,68 @@
     
     <body>
         <header class="naslovnaHeader">
-            <div class="container pt-4">
-                <div class="row">
-
-                    <div class="col-md-1 col-sm-4 col-xs-4 pr-sm-0 pl-sm-0 pr-xs-0 pl-xs-0 bcg">
-                        <picture>
-                            
-                            <a class="nav-logo" href="index.html">
-                                <source media="(min-width: 1024px)" srcset="img/logo.jpg">
-                                <source media="(min-width: 768px)" srcset="img/logo-md.jpg">
-                                <source media="(min-width: 480px)" srcset="img/logo-sm.jpg">
-                                <img src="img/logo-sm.jpg" width="72" height="100" alt="Site Logo">
-                            </a>
-                        </picture>
-                    </div>
-
-                    <div class="col-lg-3 d-lg-block d-md-none d-sm-block col-sm-8 col-xs-8 bcg">
-                        <div class="container">
-                            <div class="row icons">
-                                <div class="menubtn col-sm-6 col-xs-6">
-                                    <a href="#"><i class="fas fa-bars"></i></a>
-                                </div>
-                                <div class="col-lg-8 col-md-11 col-sm-12 col-xs-12 menu bcg">
-                                    <ul class="nav-list">
-                                        <li class="nav-list-item">
-                                            <a href="#page-1.html">O nama</a>
-                                        </li>
-                                        <li class="nav-list-item">
-                                            <a href="#page-2.html">Kolači</a>
-                                        </li>
-                                        <li class="nav-list-item">
-                                            <a href="#page-3.html">Torte</a>
-                                        </li>
-                                        <li class="nav-list-item dropbtn">
-                                            <a href="#page-4.html">Ostali proizvodi <i class="fas fa-caret-down"></i></a>
-                                            <ul class="nav-sublist">
-                                                <li class="subitem">
-                                                    <a href="#page-7.html">Sendviči</a>
-                                                </li>
-                                                <li class="subitem">
-                                                    <a href="#page-8.html">Kroasani</a>
-                                                </li>
-                                                <li class="subitem">
-                                                    <a href="#page-9.html">Krafne</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-list-item">
-                                            <a href="#page-5.html">Novosti</a>
-                                        </li>
-                                        <li class="nav-list-item">
-                                            <a href="kontakt.html">Kontakt</a>
-                                        </li>
-                                        <li class="nav-list-item nav-icon">
-                                            <a href="#"><i class="fas fa-shopping-basket"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="shopbtn col-sm-6 col-xs-6">
-                                    <a href="#"><i class="fas fa-shopping-basket"></i></a>
-                                </div>
-                            </div>
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="container">
+                    <div class="row navContainer">
+                        <div class="col-xl-2 col-md-1 col-2 pl-0 bcg">
+                            <picture>
+                                <a class="nav-logo" href="index.html">
+                                    <source media="(min-width: 1024px)" srcset="img/logo.jpg">
+                                    <source media="(min-width: 768px)" srcset="img/logo-md.jpg">
+                                    <source media="(min-width: 480px)" srcset="img/logo-sm.jpg">
+                                    <img src="img/logo-sm.jpg" width="108" height="150" alt="Site Logo">
+                                </a>
+                            </picture>
                         </div>
-                    </div>
-
-                    <div class="col-lg-8 col-md-11 col-sm-12 col-xs-12 menu bcg">
-                        <ul class="nav-list">
-                            <li class="nav-list-item">
-                                <a href="#page-1.html">O nama</a>
-                            </li>
-                            <li class="nav-list-item">
-                                <a href="#page-2.html">Kolači</a>
-                            </li>
-                            <li class="nav-list-item">
-                                <a href="#page-3.html">Torte</a>
-                            </li>
-                            <li class="nav-list-item dropbtn">
-                                <a href="#page-4.html">Ostali proizvodi <i class="fas fa-caret-down"></i></a>
-                                <ul class="nav-sublist">
-                                    <li class="subitem">
-                                        <a href="#page-7.html">Sendviči</a>
+    
+                        <div class="col-xl-8 col-md-10 col-8 bcg pt-md-0 pt-2 text-center">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#">O nama</a>
                                     </li>
-                                    <li class="subitem">
-                                        <a href="#page-8.html">Kroasani</a>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Kolači</a>
                                     </li>
-                                    <li class="subitem">
-                                        <a href="#page-9.html">Krafne</a>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Torte</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Ostali proizvodi
+                                        </a>
+                                        <ul class="dropdown-menu navContainer" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#">Sendviči</a></li>
+                                        <li><a class="dropdown-item" href="#">Kroasani</a></li>
+                                        <li><a class="dropdown-item" href="#">Krafne</a></li>
+                                        <li><a class="dropdown-item" href="#">Vege</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Novosti</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="kontakt.html">Kontakt</a>
                                     </li>
                                 </ul>
-                            </li>
-                            <li class="nav-list-item">
-                                <a href="#page-5.html">Novosti</a>
-                            </li>
-                            <li class="nav-list-item">
-                                <a href="kontakt.html">Kontakt</a>
-                            </li>
-                            <li class="nav-list-item">
-                                <a href="#"><i class="fas fa-shopping-basket"></i></a>
-                            </li>
-                        </ul>
+                                
+                            </div>
+                        </div>
+                        <div class="offset-xl-1 col-md-1 col-2 shopbtn">
+                            <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div> 
+                    </div>
+                    <div class="row">
+                        <div class="offset-lg-2 offset-1 col-lg-8 col-10 welcome">
+                            <h1>Ne propusti upoznati naše proizvode</h1>
+                            <a href="proizvodi.html" class="gumbKupi">Kupi</a>
+                        </div>
                     </div>
                 </div>
-            
-                <div class="row">
-                    <div class="offset-sm-1 offset-xs-1 col-sm-10 col-xs-10 welcome">
-                        <h1>Ne propusti upoznati naše proizvode.</h1>
-                        <a href="proizvodi.html" class="gumbKupi">Kupi</a>
-                    </div>
-                </div>
-            </div>
+            </nav>
         </header>
         <div class="preporuka">
             <div class="container">
