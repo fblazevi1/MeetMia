@@ -397,8 +397,12 @@ template {
   font: 18px "Poppins";
 }
 
+header a:hover{
+  color: #762A00 !important;
+}
+
 .proizvodiHeader{
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)), url("../img/shopCover.jpg");
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5)), url("../img/shopCover.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -424,7 +428,7 @@ template {
   border-radius: 15px;
   color: #ffffff !important;
   line-height: 25px;
-  font-family: 31px 'Poppins';
+  font: 31px 'Poppins';
   align-items: center;
   margin: 0 auto;
   margin-top: 20px;
@@ -447,44 +451,106 @@ template {
   text-align: center;
 }
 
+.ommit{
+  overflow: hidden;
+}
 
 .preporuka, .novosti {
   background-color: #E7DCCF;
 }
 
-.slikaPreporuka, .slikaKategorija {
+.slikaPreporuka{
   width: 100%;
-  filter: brightness(50%);
+  opacity: 70%;
+  transition: transform 0.4s ease;
+  transform-origin: 50% 50%;
+}
+
+.kartPrep:hover img{
+  opacity: 100%;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.kartPrep:hover h3{
+  color: #762A00;
+}
+
+.linkPreporuka{
+  text-decoration: none;
 }
 
 .nazivPreporuka{
   font: bold 25px "Poppins";
-  color: #762A00;
+  color: #AE8960;
+}
+
+.kategorija{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.slikaKategorija {
+  width: 100%;
+  filter: brightness(70%);
+  transition: position 0.5s ease-in-out;
 }
 
 .nazivKategorija{
   font: bold 41px "Poppins";
+  color: rgb(196, 196, 196);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+
+.kartKate:hover img{
+  filter: brightness(100%);
+}
+
+.kartKate:hover h3{
+  opacity: 0;
+}
+
+.novosti{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.linkNovosti{
+  color: black;
+  text-decoration: none;
+}
+
+.kartNov p, .kartProiz p, .kartPrep p {
+  color: black;
 }
 
 .slikaNovosti {
   width: 100%;
+  transition: transform 0.4s ease;
+  transform-origin: 50% 50%;
+}
+
+.kartNov:hover img{
+  opacity: 100%;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.kartNov:hover h3{
+  color: #762A00;
 }
 
 .nazivNovosti{
-  font: bold 18px "Lato";
+  font: bold 21px "Poppins";
   color: #762A00;
 }
 
 .opisNovosti{
   line-height: 140%;
-}
-
-.nazivKategorija{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #E7DCCF;
 }
 
 footer{
@@ -506,16 +572,26 @@ footer{
 }
 
 p {
-  font: 16px "Lato";
+  font: 16px "Poppins";
 }
 
 .footerDiv > p {
+  font-family: "Lato";
   color: #ffffff;
-  font-size: 14px;
+  font-size: 16px;
 }
 
-.fas, .fab {
-  font-size: 125%;
+.fas{
+  font-size: 130%;
+}
+
+.fa-envelope, .fa-phone-alt, .fa-facebook-square, .fa-instagram-square{
+  font-size: 130%;
+  margin-top: 7px;
+}
+
+.footerLink:hover{
+  color: #762A00;
 }
 
 .popisProizvoda{
@@ -523,28 +599,134 @@ p {
   padding-left: 0 ;
 }
 
-.pretrazi{
-  background-color: #AE8960;
-}
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #ffffff;
-  opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: #ffffff;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: #ffffff;
-}
-
-.popisProizvoda li{
+.popisProizvoda a{
   font: 25px "Poppins";
+  color: #762A00;
+  text-decoration: none;
+}
+
+.popisProizvoda a:hover{
+  color: #762A00;
+  font-weight: bold;
+}
+
+.nazivProizvod{
+  font: bold 25px "Poppins";
+  color: #AE8960;
+}
+
+.slikaProizvodi{
+  width: 100%;
+  transition: transform 0.4s ease;
+  transform-origin: 50% 50%;
+}
+
+.kartProiz{
+  margin-bottom: 40px;
+}
+
+.kartProiz:hover img{
+  opacity: 100%;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.kartProiz:hover h3{
   color: #762A00;
 }
 
+.izborProizvoda{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.gumbOdaberi {
+  display: block;
+  width: 100px;
+  height: 40px;
+  background: #762A00;
+  text-align: center;
+  border-radius: 15px;
+  color: #ffffff !important;
+  font: 19px 'Poppins';
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.gumbKupi :hover{
+  text-decoration: none;
+}
+
+.pgnation{
+  position: relative;
+  z-index: 10;
+}
+
+.primaryBcgColor{
+  padding-top: 20px;
+}
+
+.primaryBcgColor h2{
+  margin-bottom: 30px;
+  font-family: "Poppins";
+}
+
+.regular{
+  font-family: "Poppins";
+}
+
+.kontaktInfo .fas{
+  margin-top: 17px;
+}
+
+.kontaktInfo .fab{
+  font-size: 200%;
+}
+
+.contact-button{
+  background-color: #762A00;
+  color: #ffffff;
+}
+
+.jedanProizvod{
+  width: 100%;
+}
+
+.bozicniKolac{
+  margin-top: 24px !important;
+}
+
+#quantity{
+  width: 40px;
+  text-align: center;
+}
+
+.quantity, .total-price{
+  text-align: center;
+}
+
+.btn{
+  font-size: 10px !important;
+  padding: 0px 10px  !important;
+}
+
+.total-price{
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.detaljiProizvod{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.slicniProiz{
+  margin-top: 30px !important;
+  margin-bottom: 10px !important;
+}
 
 @media (min-width: 992px) {
 
@@ -560,7 +742,7 @@ p {
 
   .gumbKupi{
     font-size: 31px;
-    padding: 20px;
+    padding: 10px 20px;
   }
 }
 
@@ -577,6 +759,10 @@ p {
 
   .nazivPreporuka{
     font-size: 22px;
+  }
+
+  .gumbOdaberi{
+    font-size: 18px;
   }
 }
 
@@ -614,7 +800,7 @@ p {
     font-size: 25px;
     width: 110px;
     height: 55px;
-    padding: 15px;
+    padding: 10px 15px;
   }
 
   .podnaslov{
@@ -628,7 +814,23 @@ p {
   .nazivKategorija{
     font-size: 27px;
   }
-  
+
+  .popisProizvoda a{
+    font-size: 21px; 
+  }
+
+  .nazivProizvod{
+    font-size: 17px;
+  }
+
+  .gumbOdaberi{
+    font-size: 16px;
+    padding-top: 7px;
+  }
+
+  .proizvodiHeader{
+    height: 350px;
+  }
 }
 
 @media (max-width: 768px){
@@ -652,7 +854,7 @@ p {
     font-size: 21px;
     width: 90px;
     height: 45px;
-    padding: 10px;
+    padding: 5px 10px;
   }
 
   .naslovnaHeader{
@@ -674,6 +876,26 @@ p {
   .footerImg{
     display: none;
   }
+
+  .popisProizvoda a{
+    font-size: 21px; 
+  }
+
+  .nazivProizvod{
+    font-size: 21px;
+  }
+
+  .gumbOdaberi{
+    font-size: 18px;
+  }
+
+  .proizvodiHeader{
+    height: 350px;
+  }
+
+  .kontaktInfo{
+    text-align: center;
+  }
 }
 
 @media (max-width: 576px) {
@@ -691,7 +913,26 @@ p {
     font-size: 21px;
     width: 90px;
     height: 45px;
-    padding: 10px;
+    padding: 5px 10px;
+  }
+
+  .nazivProizvod{
+    font-size: 23px;
+  }
+
+  .gumbOdaberi{
+    font-size: 17px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .proizvodiHeader{
+    height: 320px;
+  }
+
+  .detaljiProizvod{
+    padding-left: 12px !important;
+    padding-right: 12px !important;
   }
 }
 

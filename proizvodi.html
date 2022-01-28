@@ -16,6 +16,10 @@
         <!-- Naš stil -->
         <link href="css/style.css" rel="stylesheet">
 
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,155 +28,327 @@
     </head>
     
     <body>
+
         <header class="proizvodiHeader">
-            <div class="container pt-4">
-                <div class="row">
-
-                    <div class="col-md-1 col-sm-4 col-xs-4 pr-sm-0 pl-sm-0 pr-xs-0 pl-xs-0 bcg">
-                        <picture>
-                            
-                            <a class="nav-logo" href="index.html">
-                                <source media="(min-width: 1024px)" srcset="img/logo.jpg">
-                                <source media="(min-width: 768px)" srcset="img/logo-md.jpg">
-                                <source media="(min-width: 480px)" srcset="img/logo-sm.jpg">
-                                <img src="img/logo-sm.jpg" width="72" height="100" alt="Site Logo">
-                            </a>
-                        </picture>
-                    </div>
-
-                    <div class="col-lg-3 d-lg-block d-md-none d-sm-block col-sm-8 col-xs-8 bcg">
-                        <div class="container">
-                            <div class="row icons">
-                                <div class="menubtn col-sm-6 col-xs-6">
-                                    <a href="#"><i class="fas fa-bars"></i></a>
-                                </div>
-                                <div class="col-lg-8 col-md-11 col-sm-12 col-xs-12 menu bcg">
-                                    <ul class="nav-list">
-                                        <li class="nav-list-item">
-                                            <a href="#page-1.html">O nama</a>
-                                        </li>
-                                        <li class="nav-list-item">
-                                            <a href="#page-2.html">Kolači</a>
-                                        </li>
-                                        <li class="nav-list-item">
-                                            <a href="#page-3.html">Torte</a>
-                                        </li>
-                                        <li class="nav-list-item dropbtn">
-                                            <a href="#page-4.html">Ostali proizvodi <i class="fas fa-caret-down"></i></a>
-                                            <ul class="nav-sublist">
-                                                <li class="subitem">
-                                                    <a href="#page-7.html">Sendviči</a>
-                                                </li>
-                                                <li class="subitem">
-                                                    <a href="#page-8.html">Kroasani</a>
-                                                </li>
-                                                <li class="subitem">
-                                                    <a href="#page-9.html">Krafne</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-list-item">
-                                            <a href="#page-5.html">Novosti</a>
-                                        </li>
-                                        <li class="nav-list-item">
-                                            <a href="kontakt.html">Kontakt</a>
-                                        </li>
-                                        <li class="nav-list-item nav-icon">
-                                            <a href="#"><i class="fas fa-shopping-basket"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="shopbtn col-sm-6 col-xs-6">
-                                    <a href="#"><i class="fas fa-shopping-basket"></i></a>
-                                </div>
-                            </div>
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="container">
+                    <div class="row navContainer">
+                        <div class="col-xl-2 col-md-1 col-2 pl-0 bcg">
+                            <picture>
+                                <a class="nav-logo" href="index.html">
+                                    <source media="(min-width: 1024px)" srcset="img/logo.jpg">
+                                    <source media="(min-width: 768px)" srcset="img/logo-md.jpg">
+                                    <source media="(min-width: 480px)" srcset="img/logo-sm.jpg">
+                                    <img src="img/logo-sm.jpg" width="108" height="150" alt="Site Logo">
+                                </a>
+                            </picture>
                         </div>
-                    </div>
-
-                    <div class="ol-sm-12 col-xs-12 menu bcg">
-                        <ul class="nav-list">
-                            <li class="nav-list-item">
-                                <a href="#page-1.html">O nama</a>
-                            </li>
-                            <li class="nav-list-item">
-                                <a href="#page-2.html">Kolači</a>
-                            </li>
-                            <li class="nav-list-item">
-                                <a href="#page-3.html">Torte</a>
-                            </li>
-                            <li class="nav-list-item dropbtn">
-                                <a href="#page-4.html">Ostali proizvodi <i class="fas fa-caret-down"></i></a>
-                                <ul class="nav-sublist">
-                                    <li class="subitem">
-                                        <a href="#page-7.html">Sendviči</a>
+    
+                        <div class="col-xl-8 col-md-10 col-8 bcg pt-md-0 pt-2 text-center">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#">O nama</a>
                                     </li>
-                                    <li class="subitem">
-                                        <a href="#page-8.html">Kroasani</a>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Kolači</a>
                                     </li>
-                                    <li class="subitem">
-                                        <a href="#page-9.html">Krafne</a>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Torte</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Ostali proizvodi
+                                        </a>
+                                        <ul class="dropdown-menu navContainer" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#">Sendviči</a></li>
+                                        <li><a class="dropdown-item" href="#">Kroasani</a></li>
+                                        <li><a class="dropdown-item" href="#">Krafne</a></li>
+                                        <li><a class="dropdown-item" href="#">Vege</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Novosti</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="kontakt.html">Kontakt</a>
                                     </li>
                                 </ul>
-                            </li>
-                            <li class="nav-list-item">
-                                <a href="#page-5.html">Novosti</a>
-                            </li>
-                            <li class="nav-list-item">
-                                <a href="kontakt.html">Kontakt</a>
-                            </li>
-                            <li class="nav-list-item">
-                                <a href="#"><i class="fas fa-shopping-basket"></i></a>
-                            </li>
-                        </ul>
+                                
+                            </div>
+                        </div>
+                        <div class="offset-xl-1 col-md-1 col-2 shopbtn">
+                            <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div> 
+                    </div>
+                    <div class="row">
+                        <div class="offset-sm-1 offset-xs-1 col-sm-10 col-xs-10 welcome">
+                            <h1>Uživaj u našoj bogatoj ponudi</h1>
+                        </div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="offset-sm-1 offset-xs-1 col-sm-10 col-xs-10 welcome">
-                        <h1>Uživaj u našoj bogatoj ponudi.</h1>
-                    </div>
-                </div>
+            </nav>
         </header>
 
-        <div class="container mt-4">
+        <div class="container pt-5 pb-5 pt-xs-4">
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-3 col-xs-12 mb-xs-4 xs-text-center">
                     <ul class="popisProizvoda">
                         <li>
-                            <a>Svi prozvodi</a>
+                            <a href="#">Svi prozvodi</a>
                         </li>
                         <li>
-                            <a>Kolači</a>
+                            <a href="#">Kolači</a>
                         </li>
                         <li>
-                            <a>Torte</a>
+                            <a href="#">Torte</a>
                         </li>
                         <li>
-                            <a>Sendviči</a>
+                            <a href="#">Sendviči</a>
                         </li>
                         <li>
-                            <a>Kroasani</a>
+                            <a href="#">Kroasani</a>
                         </li>
                         <li>
-                            <a>Krafne</a>
+                            <a href="#">Krafne</a>
+                        </li>
+                        <li>
+                            <a href="#">Vege</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-sm-9">
-                    <div class="col-sm-3">
-                        <input type="text" class="pretrazi" placeholder="Pretražite ...">
-                    </div>
-                    <div class="col-sm-3">
-                        <input list="browsers" class="pretrazi" placeholder="Sortirajte prema ...">
-                        <datalist id="browsers">
-                            <option value="Najnovije">
-                            <option value="Niža cijena">
-                            <option value="Viša cijena">
-                        </datalist>
+                    <div class="container izborProizvoda">
+                        <div class="row mb-4 pgnation">
+                            <nav aria-label="Page shop navigation">
+                                <ul class="pagination pagination justify-content-center">
+                                  <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Prethodna</a>
+                                  </li>
+                                  <li class="page-item active">
+                                    <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                                  </li>
+                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#">Sljedeća</a>
+                                  </li>
+                                </ul>
+                              </nav>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-6 kartProiz">
+                                <a href="bozicniKolaci.html" class="linkPreporuka">
+                                    <div class="ommit">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="img/proizvod1.jpg">
+                                            <source media="(min-width: 768px)" srcset="img/proizvod1-md.jpg">
+                                            <source media="(min-width: 480px)" srcset="img/proizvod1-sm.jpg">
+                                            <img class="slikaProizvodi" src="img/proizvod1-sm.jpg" alt="proizvod1">
+                                        </picture>
+                                    </div>
+                                    <h3 class="nazivProizvod mt-4">Božićni kolači</h3>
+                                    <p>Cijena - 25,00 kn</p>
+                                    <a href="bozicniKolaci.html" class="gumbOdaberi">Odaberi</a>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-6 kartProiz">
+                                <a href="#" class="linkPreporuka">
+                                    <div class="ommit">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="img/proizvod2.jpg">
+                                            <source media="(min-width: 768px)" srcset="img/proizvod2-md.jpg">
+                                            <source media="(min-width: 480px)" srcset="img/proizvod2-sm.jpg">
+                                            <img class="slikaProizvodi" src="img/proizvod2-sm.jpg" alt="proizvod2">
+                                        </picture>
+                                    </div>
+                                    <h3 class="nazivProizvod mt-4">Čokoladna torta</h3>
+                                    <p>Cijena - 25,00 kn</p>
+                                    <a href="#" class="gumbOdaberi">Odaberi</a>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-6 kartProiz">
+                                <a href="#" class="linkPreporuka">
+                                    <div class="ommit">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="img/proizvod3.jpg">
+                                            <source media="(min-width: 768px)" srcset="img/proizvod3-md.jpg">
+                                            <source media="(min-width: 480px)" srcset="img/proizvod3-sm.jpg">
+                                            <img class="slikaProizvodi" src="img/proizvod3-sm.jpg" alt="proizvod3">
+                                        </picture>
+                                    </div>
+                                    <h3 class="nazivProizvod mt-4">Kroasant višnja</h3>
+                                    <p>Cijena - 25,00 kn</p>
+                                    <a href="#" class="gumbOdaberi">Odaberi</a>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-6 kartProiz">
+                                <a href="#" class="linkPreporuka">
+                                    <div class="ommit">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="img/proizvod4.jpg">
+                                            <source media="(min-width: 768px)" srcset="img/proizvod4-md.jpg">
+                                            <source media="(min-width: 480px)" srcset="img/proizvod4-sm.jpg">
+                                            <img class="slikaProizvodi" src="img/proizvod4-sm.jpg" alt="proizvod4">
+                                        </picture>
+                                    </div>
+                                    <h3 class="nazivProizvod mt-4">Limun kolač</h3>
+                                    <p>Cijena - 25,00 kn</p>
+                                    <a href="#" class="gumbOdaberi">Odaberi</a>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-6 kartProiz">
+                                <a href="#" class="linkPreporuka">
+                                    <div class="ommit">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="img/proizvod5.jpg">
+                                            <source media="(min-width: 768px)" srcset="img/proizvod5-md.jpg">
+                                            <source media="(min-width: 480px)" srcset="img/proizvod5-sm.jpg">
+                                            <img class="slikaProizvodi" src="img/proizvod5-sm.jpg" alt="proizvod5">
+                                        </picture>
+                                    </div>
+                                    <h3 class="nazivProizvod mt-4">Čokoladna torta</h3>
+                                    <p>Cijena - 25,00 kn</p>
+                                    <a href="#" class="gumbOdaberi">Odaberi</a>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-6 kartProiz">
+                                <a href="#" class="linkPreporuka">
+                                    <div class="ommit">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="img/proizvod6.jpg">
+                                            <source media="(min-width: 768px)" srcset="img/proizvod6-md.jpg">
+                                            <source media="(min-width: 480px)" srcset="img/proizvod6-sm.jpg">
+                                            <img class="slikaProizvodi" src="img/proizvod6-sm.jpg" alt="proizvod6">
+                                        </picture>
+                                    </div>
+                                    <h3 class="nazivProizvod mt-4">Kroasant višnja</h3>
+                                    <p>Cijena - 25,00 kn</p>
+                                    <a href="#" class="gumbOdaberi">Odaberi</a>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-6 kartProiz">
+                                <a href="#" class="linkPreporuka">
+                                    <div class="ommit">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="img/proizvod7.jpg">
+                                            <source media="(min-width: 768px)" srcset="img/proizvod7-md.jpg">
+                                            <source media="(min-width: 480px)" srcset="img/proizvod7-sm.jpg">
+                                            <img class="slikaProizvodi" src="img/proizvod7-sm.jpg" alt="proizvod7">
+                                        </picture>
+                                    </div>
+                                    <h3 class="nazivProizvod mt-4">Limun kolač</h3>
+                                    <p>Cijena - 25,00 kn</p>
+                                    <a href="#" class="gumbOdaberi">Odaberi</a>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-6 kartProiz">
+                                <a href="#" class="linkPreporuka">
+                                    <div class="ommit">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="img/proizvod8.jpg">
+                                            <source media="(min-width: 768px)" srcset="img/proizvod8-md.jpg">
+                                            <source media="(min-width: 480px)" srcset="img/proizvod8-sm.jpg">
+                                            <img class="slikaProizvodi" src="img/proizvod8-sm.jpg" alt="proizvod8">
+                                        </picture>
+                                    </div>
+                                    <h3 class="nazivProizvod mt-4">Čokoladna torta</h3>
+                                    <p>Cijena - 25,00 kn</p>
+                                    <a href="#" class="gumbOdaberi">Odaberi</a>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-6 kartProiz">
+                                <a href="#" class="linkPreporuka">
+                                    <div class="ommit">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="img/proizvod9.jpg">
+                                            <source media="(min-width: 768px)" srcset="img/proizvod9-md.jpg">
+                                            <source media="(min-width: 480px)" srcset="img/proizvod9-sm.jpg">
+                                            <img class="slikaProizvodi" src="img/proizvod9-sm.jpg" alt="proizvod9">
+                                        </picture>
+                                    </div>
+                                    <h3 class="nazivProizvod mt-4">Kroasant višnja</h3>
+                                    <p>Cijena - 25,00 kn</p>
+                                    <a href="#" class="gumbOdaberi">Odaberi</a>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-6 kartProiz">
+                                <a href="#" class="linkPreporuka">
+                                    <div class="ommit">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="img/proizvod10.jpg">
+                                            <source media="(min-width: 768px)" srcset="img/proizvod10-md.jpg">
+                                            <source media="(min-width: 480px)" srcset="img/proizvod10-sm.jpg">
+                                            <img class="slikaProizvodi" src="img/proizvod10-sm.jpg" alt="proizvod10">
+                                        </picture>
+                                    </div>
+                                    <h3 class="nazivProizvod mt-4">Limun kolač</h3>
+                                    <p>Cijena - 25,00 kn</p>
+                                    <a href="#" class="gumbOdaberi">Odaberi</a>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-6 kartProiz">
+                                <a href="#" class="linkPreporuka">
+                                    <div class="ommit">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="img/proizvod11.jpg">
+                                            <source media="(min-width: 768px)" srcset="img/proizvod11-md.jpg">
+                                            <source media="(min-width: 480px)" srcset="img/proizvod11-sm.jpg">
+                                            <img class="slikaProizvodi" src="img/proizvod11-sm.jpg" alt="proizvod11">
+                                        </picture>
+                                    </div>
+                                    <h3 class="nazivProizvod mt-4">Čokoladna torta</h3>
+                                    <p>Cijena - 25,00 kn</p>
+                                    <a href="#" class="gumbOdaberi">Odaberi</a>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-6 kartProiz">
+                                <a href="#" class="linkPreporuka">
+                                    <div class="ommit">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="img/proizvod12.jpg">
+                                            <source media="(min-width: 768px)" srcset="img/proizvod12-md.jpg">
+                                            <source media="(min-width: 480px)" srcset="img/proizvod12-sm.jpg">
+                                            <img class="slikaProizvodi" src="img/proizvod12-sm.jpg" alt="proizvod12">
+                                        </picture>
+                                    </div>
+                                    <h3 class="nazivProizvod mt-4">Kroasant višnja</h3>
+                                    <p>Cijena - 25,00 kn</p>
+                                    <a href="#" class="gumbOdaberi">Odaberi</a>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <nav aria-label="Page shop navigation">
+                                <ul class="pagination pagination justify-content-center">
+                                  <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Prethodna</a>
+                                  </li>
+                                  <li class="page-item active">
+                                    <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                                  </li>
+                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#">Sljedeća</a>
+                                  </li>
+                                </ul>
+                              </nav>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
 
         <footer>
@@ -183,10 +359,10 @@
                             <source media="(min-width: 1024px)" srcset="img/logo.jpg">
                             <source media="(min-width: 768px)" srcset="img/logo-md.jpg">
                             <source media="(min-width: 480px)" srcset="img/logo-sm.jpg">
-                            <img id="logoFooter" src="img/logo-sm.jpg" alt="logo">
+                            <img id="logoFooter" class="img-fluid" src="img/logo-sm.jpg" alt="logo">
                         </picture>
                     </div>
-                    <div class="col-sm-3 col-xs-3 mt-4 mb-sm-3 mb-xs-3 footerDiv">
+                    <div class="col-sm-3 offset-xs-2 col-xs-4 mt-4 mb-sm-3 mb-xs-2 footerDiv">
                         <a class="footerLink" href="#">Kolači</a>
                         <a class="footerLink" href="#">Torte</a>
                         <a class="footerLink" href="#">Kroasani</a>
@@ -194,7 +370,7 @@
                         <a class="footerLink" href="#">Krafne</a>
                         <a class="footerLink" href="#">Vege</a>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-4 mt-4 mb-sm-3 mb-xs-3 footerDiv">
+                    <div class="col-md-3 col-sm-4 offset-xs-1 col-xs-4 mt-4 mb-sm-3 mb-xs-2 footerDiv">
                         <a class="footerLink" href="#">O nama</a>
                         <a class="footerLink" href="kontakt.html">Kontakt</a>
                         <a class="footerLink" href="#">Uvjeti poslovanja</a>
@@ -202,13 +378,13 @@
                         <a class="footerLink" href="#">Česta pitanja</a>
                         <a class="footerLink" href="#">Izjava o privatnosti</a>
                     </div>
-                    <div class="col-md-3 col-sm-5 col-xs-4 mt-4 mb-sm-3 mb-xs-3 footerDiv">
+                    <div class="col-md-3 col-sm-5 col-xs-12 mt-4 mb-sm-3 mb-xs-6 footerDiv text-center">
                         <i class="fas fa-envelope"></i>
                         <p>meetmia.cakes@gmail.com</p>
                         <i class="fas fa-phone-alt"></i>
                         <p>091 445 5122</p>
-                        <i class="fab fa-facebook-square"></i>
-                        <i class="fab fa-instagram-square"></i>
+                        <i class="fab fa-facebook-square mb-xs-4"></i>
+                        <i class="fab fa-instagram-square mb-xs-4"></i>
                     </div>
                 </div>
             </div>

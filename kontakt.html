@@ -16,6 +16,10 @@
         <!-- Naš stil -->
         <link href="css/style.css" rel="stylesheet">
 
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,145 +29,120 @@
     
     <body class="simplePage">
         <header>
-            <div class="container pt-4">
-                <div class="row">
-
-                    <div class="col-md-1 col-sm-4 col-xs-4 pr-sm-0 pl-sm-0 pr-xs-0 pl-xs-0 bcg">
-                        <a class="nav-logo" href="index.html">
-                            <img src="img/logo.jpg" width="72" height="100" alt="Site Logo">
-                        </a>
-                    </div>
-
-                    <div class="col-lg-3 d-lg-block d-md-none d-sm-block col-sm-8 col-xs-8 bcg">
-                        <div class="container">
-                            <div class="row icons">
-                                <div class="menubtn col-sm-6 col-xs-6">
-                                    <a href="#"><i class="fas fa-bars"></i></a>
-                                </div>
-                                <div class="col-lg-8 col-md-11 col-sm-12 col-xs-12 menu bcg">
-                                    <ul class="nav-list">
-                                        <li class="nav-list-item">
-                                            <a href="#page-1.html">O nama</a>
-                                        </li>
-                                        <li class="nav-list-item">
-                                            <a href="#page-2.html">Kolači</a>
-                                        </li>
-                                        <li class="nav-list-item">
-                                            <a href="#page-3.html">Torte</a>
-                                        </li>
-                                        <li class="nav-list-item dropbtn">
-                                            <a href="#page-4.html">Ostali proizvodi <i class="fas fa-caret-down"></i></a>
-                                            <ul class="nav-sublist">
-                                                <li class="subitem">
-                                                    <a href="#page-7.html">Sendviči</a>
-                                                </li>
-                                                <li class="subitem">
-                                                    <a href="#page-8.html">Kroasani</a>
-                                                </li>
-                                                <li class="subitem">
-                                                    <a href="#page-9.html">Krafne</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-list-item">
-                                            <a href="#page-5.html">Novosti</a>
-                                        </li>
-                                        <li class="nav-list-item">
-                                            <a href="kontakt.html">Kontakt</a>
-                                        </li>
-                                        <li class="nav-list-item nav-icon">
-                                            <a href="#"><i class="fas fa-shopping-basket"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="shopbtn col-sm-6 col-xs-6">
-                                    <a href="#"><i class="fas fa-shopping-basket"></i></a>
-                                </div>
-                            </div>
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="container">
+                    <div class="row navContainer">
+                        <div class="col-xl-2 col-md-1 col-2 pl-0 bcg">
+                            <picture>
+                                <a class="nav-logo" href="index.html">
+                                    <source media="(min-width: 1024px)" srcset="img/logo.jpg">
+                                    <source media="(min-width: 768px)" srcset="img/logo-md.jpg">
+                                    <source media="(min-width: 480px)" srcset="img/logo-sm.jpg">
+                                    <img src="img/logo-sm.jpg" width="108" height="150" alt="Site Logo">
+                                </a>
+                            </picture>
                         </div>
-                    </div>
-
-                    <div class="col-lg-8 col-md-11 col-sm-12 col-xs-12 menu bcg">
-                        <ul class="nav-list">
-                            <li class="nav-list-item">
-                                <a href="#page-1.html">O nama</a>
-                            </li>
-                            <li class="nav-list-item">
-                                <a href="#page-2.html">Kolači</a>
-                            </li>
-                            <li class="nav-list-item">
-                                <a href="#page-3.html">Torte</a>
-                            </li>
-                            <li class="nav-list-item dropbtn">
-                                <a href="#page-4.html">Ostali proizvodi <i class="fas fa-caret-down"></i></a>
-                                <ul class="nav-sublist">
-                                    <li class="subitem">
-                                        <a href="#page-7.html">Sendviči</a>
+    
+                        <div class="col-xl-8 col-md-10 col-8 bcg pt-md-0 pt-2 text-center">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#">O nama</a>
                                     </li>
-                                    <li class="subitem">
-                                        <a href="#page-8.html">Kroasani</a>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Kolači</a>
                                     </li>
-                                    <li class="subitem">
-                                        <a href="#page-9.html">Krafne</a>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Torte</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Ostali proizvodi
+                                        </a>
+                                        <ul class="dropdown-menu navContainer" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#">Sendviči</a></li>
+                                        <li><a class="dropdown-item" href="#">Kroasani</a></li>
+                                        <li><a class="dropdown-item" href="#">Krafne</a></li>
+                                        <li><a class="dropdown-item" href="#">Vege</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Novosti</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="kontakt.html">Kontakt</a>
                                     </li>
                                 </ul>
-                            </li>
-                            <li class="nav-list-item">
-                                <a href="#page-5.html">Novosti</a>
-                            </li>
-                            <li class="nav-list-item">
-                                <a href="kontakt.html">Kontakt</a>
-                            </li>
-                            <li class="nav-list-item">
-                                <a href="#"><i class="fas fa-shopping-basket"></i></a>
-                            </li>
-                        </ul>
+                                
+                            </div>
+                        </div>
+                        <div class="offset-xl-1 col-md-1 col-2 shopbtn">
+                            <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div> 
                     </div>
                 </div>
-            </div>
+            </nav>
         </header>
         <section class="primaryBcgColor">
             <div class="container mt-5">
-                <h2>Kontakt</h2>
-                <form disabled>
-                    <div class="row">
-                        <div class="col-6 mt-2">
-                            <label class="regular mb-1" for="name-textfield">Ime</label>
-                            <input type="text" class="form-control" id="name-textfield">
-                        </div>
-                        <div class="col-6 mt-2">
-                            <label class="regular mb-1" for="surname-textfield">Prezime</label>
-                            <input type="text" class="form-control" id="surname-textfield">
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <h2 class="podnaslov">Kontakt</h2>
+                        <p>Ako imate kakvih pitanja slobodno pitajte Miu</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-9 col-md-8 col-sm-12">
+                        <div class="container izborProizvoda ">
+                            <form disabled>
+                                <div class="row pe-md-3">
+                                    <div class="col-6 mt-2 pe-md-3">
+                                        <label class="regular mb-1" for="name-textfield">Ime</label>
+                                        <input type="text" class="form-control" id="name-textfield">
+                                    </div>
+                                    <div class="col-6 mt-2 pe-md-3">
+                                        <label class="regular mb-1" for="surname-textfield">Prezime</label>
+                                        <input type="text" class="form-control" id="surname-textfield">
+                                    </div>
+                                </div>
+                                <div class="row mt-2 pe-md-3">
+                                    <div class="col-6">
+                                        <label class="regular mb-1" for="email-textfield">Email</label>
+                                        <input type="text" class="form-control" id='email-textfield'>
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="regular mb-1" for="phone-number-textfield">Broj telefona</label>
+                                        <input type="text" class="form-control" id='phone-number-textfield'>
+                                    </div>
+                                </div>
+                                <div class="row mt-2 pe-md-3">
+                                    <div class="col-12">
+                                        <label class="regular mb-1" for="content-textarea">Poruka za Miu</label>
+                                        <textarea class="form-control" id="content-textarea" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row mt-2 pe-md-3">
+                                    <div class="col-12">
+                                        <button type="button" class="contact-button regular my-3" type="submit">Pošalji</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <div class="row mt-2">
-                        <div class="col-6">
-                            <label class="regular mb-1" for="email-textfield">Email</label>
-                            <input type="text" class="form-control" id='email-textfield'>
-                        </div>
-                        <div class="col-6">
-                            <label class="regular mb-1" for="phone-number-textfield">Broj telefona</label>
-                            <input type="text" class="form-control" id='phone-number-textfield'>
-                        </div>
+                    <div class="col-lg-3 col-md-4 col-sm-12 xs-text-center mt-sm-3 mb-sm-5 mt-xs-3 mb-xs-5 kontaktInfo">
+                        <i class="fas fa-envelope"></i>
+                        <p>meetmia.cakes@gmail.com</p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Vlaška ul. 43, 10000, Zagreb</p>
+                        <i class="fas fa-phone-alt"></i>
+                        <p>091 445 5122</p>
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-instagram-square"></i>
                     </div>
-                    <div class="row mt-2">
-                        <div class="col-12">
-                            <label class="regular mb-1" for="subject-textfield">Subjekt</label>
-                            <input type="text" class="form-control" id='subject-textfield'>
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col-12">
-                            <label class="regular mb-1" for="content-textarea">Sadržaj</label>
-                            <textarea class="form-control" id="content-textarea" cols="30" rows="10"></textarea>
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col-12">
-                            <button type="button" class="contact-button regular my-3" type="submit">Pošalji</button>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         </section>
 
@@ -171,9 +150,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 footerImg">
-                        <img id="logoFooter" src="img/logo.jpg" alt="logo">
+                        <picture>
+                            <source media="(min-width: 1024px)" srcset="img/logo.jpg">
+                            <source media="(min-width: 768px)" srcset="img/logo-md.jpg">
+                            <source media="(min-width: 480px)" srcset="img/logo-sm.jpg">
+                            <img id="logoFooter" class="img-fluid" src="img/logo-sm.jpg" alt="logo">
+                        </picture>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-4 mt-4 mb-sm-3 mb-xs-3 footerDiv">
+                    <div class="col-sm-3 offset-xs-2 col-xs-4 mt-4 mb-sm-3 mb-xs-2 footerDiv">
                         <a class="footerLink" href="#">Kolači</a>
                         <a class="footerLink" href="#">Torte</a>
                         <a class="footerLink" href="#">Kroasani</a>
@@ -181,7 +165,7 @@
                         <a class="footerLink" href="#">Krafne</a>
                         <a class="footerLink" href="#">Vege</a>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-4 mt-4 mb-sm-3 mb-xs-3 footerDiv">
+                    <div class="col-md-3 col-sm-4 offset-xs-1 col-xs-4 mt-4 mb-sm-3 mb-xs-2 footerDiv">
                         <a class="footerLink" href="#">O nama</a>
                         <a class="footerLink" href="kontakt.html">Kontakt</a>
                         <a class="footerLink" href="#">Uvjeti poslovanja</a>
@@ -189,13 +173,13 @@
                         <a class="footerLink" href="#">Česta pitanja</a>
                         <a class="footerLink" href="#">Izjava o privatnosti</a>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-4 mt-4 mb-sm-3 mb-xs-3 footerDiv">
+                    <div class="col-md-3 col-sm-5 col-xs-12 mt-4 mb-sm-3 mb-xs-6 footerDiv text-center">
                         <i class="fas fa-envelope"></i>
                         <p>meetmia.cakes@gmail.com</p>
                         <i class="fas fa-phone-alt"></i>
                         <p>091 445 5122</p>
-                        <i class="fab fa-facebook-square"></i>
-                        <i class="fab fa-instagram-square"></i>
+                        <i class="fab fa-facebook-square mb-xs-4"></i>
+                        <i class="fab fa-instagram-square mb-xs-4"></i>
                     </div>
                 </div>
             </div>
