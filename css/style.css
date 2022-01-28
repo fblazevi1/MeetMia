@@ -397,7 +397,7 @@ template {
   font: 18px "Poppins";
 }
 
-header a:hover{
+.navbar-nav a:hover{
   color: #762A00 !important;
 }
 
