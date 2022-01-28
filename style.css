@@ -1,0 +1,987 @@
+/*!
+ * Bootstrap Reboot v4.4.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  background-color: #fff;
+}
+
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0 !important;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: 0;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+}
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  font-size: 1em;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+}
+
+figure {
+  margin: 0 0 1rem;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+caption {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: #6c757d;
+  text-align: left;
+  caption-side: bottom;
+}
+
+th {
+  text-align: inherit;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  border-radius: 0;
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+select {
+  word-wrap: normal;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+  color: inherit;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  outline-offset: -2px;
+  -webkit-appearance: none;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+output {
+  display: inline-block;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
+template {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bcg {
+  background-color: #AE8960;
+  height: 54px;
+}
+
+.subitem{
+  padding-right: 31%;
+}
+
+.menu{
+  position: relative;
+  z-index: 9998;
+}
+
+.naslovnaHeader{
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5)), url("../img/homeCover.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+}
+
+.navContainer{
+  background-color: #AE8960 !important;
+}
+
+.navContainer picture{
+  position: relative;
+  z-index: 99;
+}
+
+.navbar-nav{
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  z-index: 30;
+}
+
+.collapse{
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+  background-color: #AE8960;
+}
+
+.navbar-nav li{
+  text-align: center;
+}
+
+.navbar-nav li a{
+  display: block;
+  padding: 15px 5px;
+  text-decoration: none;
+  margin-right: 10px;
+  color: white !important;
+  font: 18px "Poppins";
+}
+
+.navbar-nav a:hover{
+  color: #762A00 !important;
+}
+
+.proizvodiHeader{
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5)), url("../img/shopCover.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+.welcome{
+  margin-top: 100px !important;
+  text-align: center;
+  height: 200px;
+  font-family: 'Poppins';
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.gumbKupi {
+  display: block;
+  width: 135px;
+  height: 65px;
+  background: #762A00;
+  text-align: center;
+  border-radius: 15px;
+  color: #ffffff !important;
+  line-height: 25px;
+  font: 31px 'Poppins';
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.gumbKupi :hover{
+  text-decoration: none;
+}
+
+.welcome h1 {
+  font-size: 55px;
+}
+
+.podnaslov{
+  font: 41px "Poppins";
+}
+
+.rowPodnaslov{
+  text-align: center;
+}
+
+.ommit{
+  overflow: hidden;
+}
+
+.preporuka, .novosti {
+  background-color: #E7DCCF;
+}
+
+.slikaPreporuka{
+  width: 100%;
+  opacity: 70%;
+  transition: transform 0.4s ease;
+  transform-origin: 50% 50%;
+}
+
+.kartPrep:hover img{
+  opacity: 100%;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.kartPrep:hover h3{
+  color: #762A00;
+}
+
+.linkPreporuka{
+  text-decoration: none;
+}
+
+.nazivPreporuka{
+  font: bold 25px "Poppins";
+  color: #AE8960;
+}
+
+.kategorija{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.slikaKategorija {
+  width: 100%;
+  filter: brightness(70%);
+  transition: position 0.5s ease-in-out;
+}
+
+.nazivKategorija{
+  font: bold 41px "Poppins";
+  color: rgb(196, 196, 196);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+
+.kartKate:hover img{
+  filter: brightness(100%);
+}
+
+.kartKate:hover h3{
+  opacity: 0;
+}
+
+.novosti{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.linkNovosti{
+  color: black;
+  text-decoration: none;
+}
+
+.kartNov p, .kartProiz p, .kartPrep p {
+  color: black;
+}
+
+.slikaNovosti {
+  width: 100%;
+  transition: transform 0.4s ease;
+  transform-origin: 50% 50%;
+}
+
+.kartNov:hover img{
+  opacity: 100%;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.kartNov:hover h3{
+  color: #762A00;
+}
+
+.nazivNovosti{
+  font: bold 21px "Poppins";
+  color: #762A00;
+}
+
+.opisNovosti{
+  line-height: 140%;
+}
+
+footer{
+  background-color: #AE8960;
+}
+
+.footerLink{
+  display: block;
+  font: 16px "Lato";
+  text-decoration: none;
+  color: #ffffff;
+  margin-top: 7px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#logoFooter{
+  height: 220px;
+}
+
+p {
+  font: 16px "Poppins";
+}
+
+.footerDiv > p {
+  font-family: "Lato";
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.fas{
+  font-size: 130%;
+}
+
+.fa-envelope, .fa-phone-alt, .fa-facebook-square, .fa-instagram-square{
+  font-size: 130%;
+  margin-top: 7px;
+}
+
+.footerLink:hover{
+  color: #762A00;
+}
+
+.popisProizvoda{
+  list-style: none;
+  padding-left: 0 ;
+}
+
+.popisProizvoda a{
+  font: 25px "Poppins";
+  color: #762A00;
+  text-decoration: none;
+}
+
+.popisProizvoda a:hover{
+  color: #762A00;
+  font-weight: bold;
+}
+
+.nazivProizvod{
+  font: bold 25px "Poppins";
+  color: #AE8960;
+}
+
+.slikaProizvodi{
+  width: 100%;
+  transition: transform 0.4s ease;
+  transform-origin: 50% 50%;
+}
+
+.kartProiz{
+  margin-bottom: 40px;
+}
+
+.kartProiz:hover img{
+  opacity: 100%;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.kartProiz:hover h3{
+  color: #762A00;
+}
+
+.izborProizvoda{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.gumbOdaberi {
+  display: block;
+  width: 100px;
+  height: 40px;
+  background: #762A00;
+  text-align: center;
+  border-radius: 15px;
+  color: #ffffff !important;
+  font: 19px 'Poppins';
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.gumbKupi :hover{
+  text-decoration: none;
+}
+
+.pgnation{
+  position: relative;
+  z-index: 10;
+}
+
+.primaryBcgColor{
+  padding-top: 20px;
+}
+
+.primaryBcgColor h2{
+  margin-bottom: 30px;
+  font-family: "Poppins";
+}
+
+.regular{
+  font-family: "Poppins";
+}
+
+.kontaktInfo .fas{
+  margin-top: 17px;
+}
+
+.kontaktInfo .fab{
+  font-size: 200%;
+}
+
+.contact-button{
+  background-color: #762A00;
+  color: #ffffff;
+}
+
+.jedanProizvod{
+  width: 100%;
+}
+
+.bozicniKolac{
+  margin-top: 24px !important;
+}
+
+#quantity{
+  width: 40px;
+  text-align: center;
+}
+
+.quantity, .total-price{
+  text-align: center;
+}
+
+.btn{
+  font-size: 10px !important;
+  padding: 0px 10px  !important;
+}
+
+.total-price{
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.detaljiProizvod{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.slicniProiz{
+  margin-top: 30px !important;
+  margin-bottom: 10px !important;
+}
+
+.copyright{
+  font-size: 11px;
+}
+
+@media (min-width: 992px) {
+
+  .welcome{
+    margin-top: 100px;
+    height: 350px;
+    padding-top: 40px;
+  }
+
+  .welcome h1 {
+    font-size: 55px;
+  }
+
+  .gumbKupi{
+    font-size: 31px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 992px){
+  .naslovnaHeader{
+    height: 500px;
+  }
+
+  .welcome{
+    margin-top: 80px !important;
+    height: 320px;
+    padding-top: 35px;
+  }
+
+  .nazivPreporuka{
+    font-size: 22px;
+  }
+
+  .gumbOdaberi{
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 768px){
+
+  .naslovnaHeader{
+    height: 450px;
+  }
+
+  .navbar-nav li a{
+    display: block;
+    padding: 15px 5px;
+    text-decoration: none;
+    margin-right: 7px;
+    color: white !important;
+    font: 16px "Poppins";
+  }
+
+  .nav-logo img{
+    width: 80px;
+    height: 110px;
+  }
+
+  .welcome{
+    margin-top: 60px !important;
+    height: 270px;
+    padding-top: 35px;
+  }
+
+  .welcome h1 {
+    font-size: 41px;
+  }
+
+  .gumbKupi{
+    font-size: 25px;
+    width: 110px;
+    height: 55px;
+    padding: 10px 15px;
+  }
+
+  .podnaslov{
+    font-size: 32px;
+  }
+
+  .nazivPreporuka{
+    font-size: 17px;
+  }
+
+  .nazivKategorija{
+    font-size: 27px;
+  }
+
+  .popisProizvoda a{
+    font-size: 21px; 
+  }
+
+  .nazivProizvod{
+    font-size: 17px;
+  }
+
+  .gumbOdaberi{
+    font-size: 16px;
+    padding-top: 7px;
+  }
+
+  .proizvodiHeader{
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px){
+
+  .nav-logo img{
+    width: 72px;
+    height: 100px;
+  }
+
+  .welcome{
+    margin-top: 50px !important;
+    height: 240px;
+    padding-top: 35px;
+  }
+
+  .welcome h1 {
+    font-size: 30px;
+  }
+
+  .gumbKupi{
+    font-size: 21px;
+    width: 90px;
+    height: 45px;
+    padding: 5px 10px;
+  }
+
+  .naslovnaHeader{
+    height: 370px;
+  }
+
+  .podnaslov{
+    font-size: 26px;
+  }
+
+  .nazivPreporuka{
+    font-size: 17px;
+  }
+
+  .nazivKategorija{
+    font-size: 23px;
+  }
+
+  .footerImg{
+    display: none;
+  }
+
+  .popisProizvoda a{
+    font-size: 21px; 
+  }
+
+  .nazivProizvod{
+    font-size: 21px;
+  }
+
+  .gumbOdaberi{
+    font-size: 18px;
+  }
+
+  .proizvodiHeader{
+    height: 350px;
+  }
+
+  .kontaktInfo{
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .welcome{
+    margin-top: 100px;
+    height: 240px;
+    padding-top: 35px;
+  }
+
+  .welcome h1 {
+    font-size: 30px;
+  }
+
+  .gumbKupi{
+    font-size: 21px;
+    width: 90px;
+    height: 45px;
+    padding: 5px 10px;
+  }
+
+  .nazivProizvod{
+    font-size: 23px;
+  }
+
+  .gumbOdaberi{
+    font-size: 17px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .proizvodiHeader{
+    height: 320px;
+  }
+
+  .detaljiProizvod{
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}
+
+.navbar-toggler{
+  padding: 15px 5px;
+}
+
+.shopbtn > a {
+  display: block;
+  padding: 15px 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.shopbtn {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.shopbtn a:hover {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+  color: #ffffff;
+}
+
+.icons > a {
+  display: block;
+  padding: 15px 5px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.form-control{
+  width: 100%;
+}
+
+.simplePage{
+  background-color: #E7DCCF;
+}
+
+
+[hidden] {
+  display: none !important;
+}
+/*# sourceMappingURL=bootstrap-reboot.css.map */
