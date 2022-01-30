@@ -816,7 +816,7 @@ p {
   }
 
   .nazivPreporuka{
-    font-size: 17px;
+    font-size: 19px;
   }
 
   .nazivKategorija{
@@ -874,7 +874,7 @@ p {
   }
 
   .nazivPreporuka{
-    font-size: 17px;
+    font-size: 22px;
   }
 
   .nazivKategorija{
@@ -925,7 +925,7 @@ p {
   }
 
   .nazivProizvod{
-    font-size: 23px;
+    font-size: 21px;
   }
 
   .gumbOdaberi{
@@ -954,6 +954,16 @@ p {
   }
 }
 
+@media (max-width: 416px){
+  .nazivProizvod{
+    font-size: 19px;
+  }
+
+  .nazivPreporuka{
+    font-size: 19px;
+  }
+}
+
 .navbar-toggler{
   padding: 15px 5px;
 }
@@ -972,8 +982,7 @@ p {
 }
 
 .shopbtn a:hover {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
-  color: #ffffff;
+  color: #762A00;
 }
 
 .icons > a {
