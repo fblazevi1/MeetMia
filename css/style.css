@@ -952,6 +952,10 @@ p {
     height: 60px;
     margin-left: 15px;
   }
+
+  .primaryBcgColor{
+    padding-top: 2px;
+  }
 }
 
 @media (max-width: 416px){
