@@ -776,6 +776,11 @@ p {
   .bozicniKolac{
     padding-left: 18px !important;
   }
+
+  .jedanProizvod{
+    width: 462px;
+    height: 385px;
+  }
 }
 
 @media (max-width: 992px) and (min-width: 768px){
