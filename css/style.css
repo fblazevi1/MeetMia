@@ -668,7 +668,7 @@ p {
 }
 
 .primaryBcgColor{
-  padding-top: 20px;
+  padding-top: 50px;
 }
 
 .primaryBcgColor h2{
@@ -771,6 +771,10 @@ p {
 
   .gumbOdaberi{
     font-size: 18px;
+  }
+
+  .bozicniKolac{
+    padding-left: 18px !important;
   }
 }
 
@@ -954,7 +958,7 @@ p {
   }
 
   .primaryBcgColor{
-    padding-top: 0px;
+    padding-top: 2px;
   }
 }
 
